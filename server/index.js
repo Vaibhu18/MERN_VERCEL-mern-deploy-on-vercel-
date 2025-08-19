@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
+import "dotenv/config"
 
 const app = express();
 app.use(cors());
@@ -14,7 +15,7 @@ const userSchema = new mongoose.Schema({
 
 const userModel = mongoose.model("User", userSchema)
 
-mongoose.connect("mongodb+srv://vcode:vcode123@general-use.akpl2d4.mongodb.net/deployment")
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Mongodb is connected")
     })
