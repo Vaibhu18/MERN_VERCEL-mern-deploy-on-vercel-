@@ -12,3 +12,8 @@ export const registerUser = async (req, res) => {
         return res.json({ status: false, message: error.message })
     }
 }
+
+export const getUserDate = async (req, res) => {
+    const user = await userModel.find();
+    return res.json({ status: true, user: user[0] })
+}
