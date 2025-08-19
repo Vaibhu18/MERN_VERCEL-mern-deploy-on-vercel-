@@ -6,8 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.get("/", async (req, res) => {
-    return res.json({ name: "Vaibhav Shinde" })
+app.get("/vaibhav", async (req, res) => {
+    return res.json({ name: "Hey Vaibhav Shinde" })
+})
+app.get("/onkar", async (req, res) => {
+    return res.json({ name: "Hey Onkar Shinde" })
 })
 
 app.listen(3000, () => {
