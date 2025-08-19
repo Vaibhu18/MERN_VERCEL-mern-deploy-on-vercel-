@@ -1,5 +1,6 @@
 # Client specific
 client/node_modules
+client/.env
 
 
 # Server specific
